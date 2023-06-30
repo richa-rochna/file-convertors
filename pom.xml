@@ -1,0 +1,41 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- The simplest way to build a service with service-sdk-starter-core 
+        is to use it as a parent in your project’s POM file, alternatively if you 
+        don’t want to use service-sdk-starter-core as your project’s parent, you 
+        can declare it as a dependency instead, see pom-as-dependency.xml -->
+    <parent>
+        <groupId>com.backbase.buildingblocks</groupId>
+        <version>15.2.0</version>
+        <artifactId>service-sdk-starter-core</artifactId>
+        <relativePath />
+    </parent>
+
+    <groupId>com.file.convertors</groupId>
+    <artifactId>file-convertors</artifactId>
+    <version>1.0.0</version>
+    <packaging>war</packaging>
+    <name>file-convertors</name>
+
+    <properties>
+        <java.version>11</java.version>
+        <open-api-specs-dir>${project.build.directory}/specs</open-api-specs-dir>
+    </properties>
+
+        <dependencies>
+            <dependency>
+                <groupId>com.googlecode.json-simple</groupId>
+                <artifactId>json-simple</artifactId>
+                <version>1.1.1</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>2.8.7</version>
+            </dependency>
+
+        </dependencies>
+</project>
